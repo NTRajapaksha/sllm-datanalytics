@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Note: You still need to manually pull the models or script it on first start
+
+  pipeline:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+
+volumes:
+  ollama_data:

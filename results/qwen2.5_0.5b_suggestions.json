@@ -1,0 +1,122 @@
+{
+  "columns": [
+    {
+      "original_name": "Transaction ID",
+      "suggested_name": "Transaction ID",
+      "suggested_dtype": "object",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "mean",
+      "recommended_imputation_type": "numeric",
+      "recommended_imputation_value": 1
+    },
+    {
+      "original_name": "Customer ID",
+      "suggested_name": "Customer ID",
+      "suggested_dtype": "object",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "mean",
+      "recommended_imputation_type": "numeric",
+      "recommended_imputation_value": 1
+    },
+    {
+      "original_name": "Category",
+      "suggested_name": "Category",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": "Patisserie"
+    },
+    {
+      "original_name": "Item",
+      "suggested_name": "Item",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": "Milk Products"
+    },
+    {
+      "original_name": "Price Per Unit",
+      "suggested_name": "Price Per Unit",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": 1
+    },
+    {
+      "original_name": "Quantity",
+      "suggested_name": "Quantity",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": 1
+    },
+    {
+      "original_name": "Total Spent",
+      "suggested_name": "Total Spent",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": 1
+    },
+    {
+      "original_name": "Payment Method",
+      "suggested_name": "Payment Method",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": "Digital Wallet"
+    },
+    {
+      "original_name": "Location",
+      "suggested_name": "Location",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": "In-store"
+    },
+    {
+      "original_name": "Transaction Date",
+      "suggested_name": "Transaction Date",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": "2024-04-08"
+    },
+    {
+      "original_name": "Discount Applied",
+      "suggested_name": "Discount Applied",
+      "suggested_dtype": "boolean",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "constant:Unknown",
+      "recommended_imputation_value": true
+    }
+  ],
+  "dashboard_suggestions": {
+    "suggested_kpis": ["Total Spent", "Quantity", "Price Per Unit", "Discount Applied"],
+    "suggested_charts": [
+      {
+        "chart_type": "bar",
+        "columns": ["Transaction ID", "Discount Applied"],
+        "description": "Show the total amount spent for each transaction and the number of products sold"
+      },
+      {
+        "chart_type": "pie",
+        "columns": ["Category"],
+        "description": "Show the percentage of each category in the dataset"
+      }
+    ],
+    "suggested_filters": [],
+    "dashboard_pages": ["Dashboard"]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "columns": [
+    {
+      "original_name": "Transaction ID",
+      "suggested_name": "transaction_id",
+      "suggested_dtype": "id",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Customer ID",
+      "suggested_name": "customer_id",
+      "suggested_dtype": "id",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Category",
+      "suggested_name": "category",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Item",
+      "suggested_name": "item",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "mode"
+    },
+    {
+      "original_name": "Price Per Unit",
+      "suggested_name": "price_per_unit",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "mean"
+    },
+    {
+      "original_name": "Quantity",
+      "suggested_name": "quantity",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "mean"
+    },
+    {
+      "original_name": "Total Spent",
+      "suggested_name": "total_spent",
+      "suggested_dtype": "numeric",
+      "role": "target",
+      "has_outliers": true,
+      "recommended_imputation": "median"
+    },
+    {
+      "original_name": "Payment Method",
+      "suggested_name": "payment_method",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Location",
+      "suggested_name": "location",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Transaction Date",
+      "suggested_name": "transaction_date",
+      "suggested_dtype": "date",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Discount Applied",
+      "suggested_name": "discount_applied",
+      "suggested_dtype": "boolean",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "mode"
+    }
+  ],
+  "dashboard_suggestions": {
+    "suggested_kpis": [
+      "total_spent",
+      "average_price_per_unit"
+    ],
+    "suggested_charts": [
+      {
+        "chart_type": "bar",
+        "columns": ["category", "total_spent"],
+        "description": "Category vs Total Spent"
+      },
+      {
+        "chart_type": "boxplot",
+        "columns": ["price_per_unit", "quantity"],
+        "description": "Price Per Unit and Quantity"
+      }
+    ],
+    "suggested_filters": [
+      "category = \"Patisserie\"",
+      "location = \"In-store\""
+    ],
+    "dashboard_pages": [
+      "Home Page",
+      "Category Page"
+    ]
+  }
+}

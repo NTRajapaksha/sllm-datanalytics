@@ -1,0 +1,115 @@
+{
+  "columns": [
+    {
+      "original_name": "Transaction ID",
+      "suggested_name": "TransactionID",
+      "suggested_dtype": "id",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Customer ID",
+      "suggested_name": "CustomerID",
+      "suggested0_dtype": "id",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Category",
+      "suggested_name": "Category",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Item",
+      "suggested_name": "Item",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Price Per Unit",
+      "suggested_name": "PricePerUnit",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "median"
+    },
+    {
+      "original_name": "Quantity",
+      "suggested_name": "Quantity",
+      "suggested_dtype": "numeric",
+      "role": "feature",
+      "has_outliers": true,
+      "recommended_imputation": "median"
+    },
+    {
+      "original_name": "Total Spent",
+      "suggested_name": "TotalSpent",
+      "suggested_dtype": "numeric",
+      "role": "target",
+      "has_outliers": true,
+      "recommended_imputation": "median"
+    },
+    {
+      "original_name": "Payment Method",
+      "suggested_name": "PaymentMethod",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "mode"
+    },
+    {
+      "original_name": "Location",
+      "suggested_name": "Location",
+      "suggested_dtype": "categorical",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "mode"
+    },
+    {
+      "original_name": "Transaction Date",
+      "suggested_name": "TransactionDate",
+      "suggested_dtype": "date",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    },
+    {
+      "original_name": "Discount Applied",
+      "suggested_name": "DiscountApplied",
+      "suggested_dtype": "boolean",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "none"
+    }
+  ],
+  "dashboard_suggestions": {
+    "suggested_kpis": [
+      "Average Price Per Unit",
+      "Average Quantity"
+    ],
+    "suggested_charts": [
+      {
+        "chart_type": "bubble chart",
+        "columns": ["TotalSpent", "Quantity", "PricePerUnit"],
+        "description": "This chart could help understand the relationship between the quantity of items bought, the price per unit, and the total amount spent."
+      },
+      {
+        "chart_type": "pie chart",
+        "columns": ["PaymentMethod"],
+        "description": "This chart could show the distribution of payment methods used by customers."
+      }
+    ],
+    "suggested_filters": [
+      "Transaction Date",
+      "Location",
+    "dashboard_pages"
+  ]
+}
+}
