@@ -1,0 +1,46 @@
+[1/4] Running Data Profiler...
+Successfully extracted metadata for 11 columns and 12575 rows.
+
+[2/4] Running LLM Copilot (This may take some time depending on your hardware)...
+Extracting metadata from data/retail_store_sales.csv...
+Running prompt on model: qwen2.5:0.5b...
+Saved suggestions for qwen2.5:0.5b to results/qwen2.5_0.5b_suggestions.json
+Running prompt on model: llama3.2:3b...
+Saved suggestions for llama3.2:3b to results/llama3.2_3b_suggestions.json
+Running prompt on model: phi3:mini...
+Saved suggestions for phi3:mini to results/phi3_mini_suggestions.json
+
+[3/4] Cleaning Data based on LLM suggestions...
+Applying suggestions from qwen2.5:0.5b...
+  -> [qwen2.5:0.5b] Auto-capped outliers for: Price Per Unit
+  -> [qwen2.5:0.5b] Auto-capped outliers for: Quantity
+  -> [qwen2.5:0.5b] Auto-capped outliers for: Total Spent
+Saved cleaned data for qwen2.5:0.5b to results/qwen2.5_0.5b_cleaned.csv
+Applying suggestions from llama3.2:3b...
+  -> [llama3.2:3b] Auto-capped outliers for: Total Spent
+Saved cleaned data for llama3.2:3b to results/llama3.2_3b_cleaned.csv
+Applying suggestions from phi3:mini...
+  -> [phi3:mini] Auto-capped outliers for: Price Per Unit
+  -> [phi3:mini] Auto-capped outliers for: Quantity
+  -> [phi3:mini] Auto-capped outliers for: Total Spent
+Saved cleaned data for phi3:mini to results/phi3_mini_cleaned.csv
+
+[4/4] Evaluating Models (XGBoost Classification)...
+
+Evaluating dataset: RAW DATA (Target: Payment Method)
+Results for RAW DATA:
+F1 Score: 0.3413
+AUC:      0.5190
+Time:     4.73 seconds
+
+Evaluating dataset: CLEANED BY qwen2.5:0.5b (Target: Payment Method)
+Results for CLEANED BY qwen2.5:0.5b:
+F1 Score: 0.3447
+AUC:      0.5230
+Time:     2.65 seconds
+
+Evaluating dataset: CLEANED BY llama3.2:3b (Target: payment_method)
+Results for CLEANED BY llama3.2:3b:
+F1 Score: 0.3447
+AUC:      0.5230
+Time:     2.72 seconds
