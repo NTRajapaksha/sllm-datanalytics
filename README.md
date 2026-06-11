@@ -1,6 +1,6 @@
 # 🚀 Small LLM as a Data Preprocessing & BI Copilot
 
-*📖 Read the full deep-dive article about this experiment here: [ARTICLE.md](ARTICLE.md)*
+*📖 Read the full deep-dive article about this experiment here: [ARTICLE](https://www.linkedin.com/pulse/can-3b-parameter-model-prep-data-xgboost-local-ai-rajapaksha-m7skc)*
 
 This project explores whether small, locally-hosted Large Language Models (LLMs in the 0.5B to 3.8B parameter range) can successfully act as autonomous data preprocessing assistants. 
 
