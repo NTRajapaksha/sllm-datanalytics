@@ -1,0 +1,194 @@
+{
+  "columns": [
+    {
+      "original_name": "customerID",
+      "suggested_name": "customer_id",
+      "suggested_dtype": "object",
+      "role": "identifier",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "gender",
+      "suggested_name": "gender",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "SeniorCitizen",
+      "suggested_name": "SeniorCitizen",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "Partner",
+      "suggested_name": "partner",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "Dependents",
+      "suggested_name": "dependents",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "tenure",
+      "suggested_name": "tenure",
+      "suggested_dtype": "int64",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "PhoneService",
+      "suggested_name": "phone_service",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "MultipleLines",
+      "suggested_name": "multiple_lines",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "InternetService",
+      "suggested_name": "internet_service",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "OnlineSecurity",
+      "suggested_name": "online_security",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "OnlineBackup",
+      "suggested_name": "online_backup",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "DeviceProtection",
+      "suggested_name": "device_protection",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "TechSupport",
+      "suggested_name": "tech_support",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "StreamingTV",
+      "suggested_name": "streaming_tv",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "StreamingMovies",
+      "suggested_name": "streaming_movies",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "Contract",
+      "suggested_name": "contract",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "PaperlessBilling",
+      "suggested_name": "paperless_billing",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "PaymentMethod",
+      "suggested_name": "payment_method",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "MonthlyCharges",
+      "suggested_name": "monthly_charges",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "TotalCharges",
+      "suggested_name": "total_charges",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    },
+    {
+      "original_name": "Churn",
+      "suggested_name": "churn",
+      "suggested_dtype": "object",
+      "role": "feature",
+      "has_outliers": false,
+      "recommended_imputation": "drop"
+    }
+  ],
+  "dashboard_suggestions": {
+    "suggested_kpis": ["MonthlyCharges", "TotalCharges", "Churn"],
+    "suggested_charts": [
+      {
+        "chart_type": "line",
+        "columns": ["MonthlyCharges", "TotalCharges"],
+        "description": "Line chart showing monthly and total charges over time"
+      },
+      {
+        "chart_type": "histogram",
+        "columns": ["MonthlyCharges", "TotalCharges"],
+        "description": "Histogram showing the distribution of monthly and total charges"
+      },
+      {
+        "chart_type": "scatterplot",
+        "columns": ["MonthlyCharges", "TotalCharges"],
+        "description": "Scatterplot showing monthly and total charges"
+      }
+    ],
+    "suggested_filters": ["customerID", "tenure", "gender", "Partner", "Dependents"],
+    "dashboard_pages": ["customerID", "tenure", "gender", "Partner", "Dependents", "Churn"]
+  }
+}

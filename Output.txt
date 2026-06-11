@@ -1,0 +1,53 @@
+==================================================
+ SMALL LLM PREPROCESSING & BI COPILOT PIPELINE 
+==================================================
+
+[1/4] Running Data Profiler...
+Successfully extracted metadata for 21 columns and 7043 rows.
+
+[2/4] Running LLM Copilot (This may take some time depending on your hardware)...
+Extracting metadata from data/WA_Fn-UseC_-Telco-Customer-Churn.csv...
+Running prompt on model: qwen2.5:0.5b...
+Saved suggestions for qwen2.5:0.5b to results/qwen2.5_0.5b_suggestions.json
+Running prompt on model: llama3.2:3b...
+Saved suggestions for llama3.2:3b to results/llama3.2_3b_suggestions.json
+Running prompt on model: phi3:mini...
+Saved suggestions for phi3:mini to results/phi3_mini_suggestions.json
+
+[3/4] Cleaning Data based on LLM suggestions...
+Applying suggestions from qwen2.5:0.5b...
+Saved cleaned data for qwen2.5:0.5b to results/qwen2.5_0.5b_cleaned.csv
+Applying suggestions from llama3.2:3b...
+  -> [llama3.2:3b] Auto-capped outliers for: MonthlyCharges
+  -> [llama3.2:3b] Auto-capped outliers for: TotalCharges
+Saved cleaned data for llama3.2:3b to results/llama3.2_3b_cleaned.csv
+Applying suggestions from phi3:mini...
+Saved cleaned data for phi3:mini to results/phi3_mini_cleaned.csv
+
+[4/4] Evaluating Models (XGBoost Classification)...
+
+Evaluating dataset: RAW DATA (Target: Churn)
+Results for RAW DATA:
+F1 Score: 0.5428
+AUC:      0.8311
+Time:     2.30 seconds
+
+Evaluating dataset: CLEANED BY qwen2.5:0.5b (Target: churn)
+Results for CLEANED BY qwen2.5:0.5b:
+F1 Score: 0.5428
+AUC:      0.8311
+Time:     0.59 seconds
+
+Evaluating dataset: CLEANED BY llama3.2:3b (Target: churn)
+Results for CLEANED BY llama3.2:3b:
+F1 Score: 0.5581
+AUC:      0.8345
+Time:     0.41 seconds
+
+Evaluating dataset: CLEANED BY phi3:mini (Target: customer_churn)
+Results for CLEANED BY phi3:mini:
+F1 Score: 0.5689
+AUC:      0.8360
+Time:     0.27 seconds
+
+==================================================

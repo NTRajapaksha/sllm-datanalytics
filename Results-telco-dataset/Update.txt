@@ -1,0 +1,2 @@
+TARGET_COL_HINTS  = ["Churn", "churn", "churn_value"]
+model_evaluator.py
